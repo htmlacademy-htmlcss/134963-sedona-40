@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Гостиницы Седоны</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <a href="#">
+          <img src="" alt="логотип сайта Седона" />
+        </a>
+        <ul>
+          <li>
+            <a href="index.html">
+              <span>Главная</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>О седоне</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Гостиницы</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="header-nav">
+        <form method="get" class="input-search">
+          <input
+            class="search"
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Поиск:"
+          />
+          <label class="search-label" for="search"></label>
+        </form>
+        <button class="favorite-icon" type="button">
+          <svg width="18" height="18">
+            <use></use>
+          </svg>
+          <span>Избранное</span>
+          <div class="favorite-count">12</div>
+        </button>
+        <a class="button-lets-go" href="#"> Хочу сюда!</a>
+      </div>
+    </header>
+    <main>
+      <div>
+        <h1>Гостиницы Седоны</h1>
+        <ul class="breadcrumbs">
+          <li>
+            <a href="index.html">
+              <span>Главная</span>
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html"><span>Каталог</span></a>
+          </li>
+        </ul>
+        <section>
+          <form method="get" action="https://echo.htmlacademy.ru">
+            <fieldset>
+              <legend>Инфраструктура:</legend>
+              <ul>
+                <li>
+                  <input
+                    name="swimmingpool"
+                    type="checkbox"
+                    id="filter-swimmingpool"
+                    checked
+                  />
+                  <label for="filter-swimmigpool">Бассейн</label>
+                </li>
+                <li>
+                  <input
+                    name="parking"
+                    type="checkbox"
+                    id="filter-Parking"
+                    checked
+                  />
+                  <label for="filter-Parking">Парковка</label>
+                </li>
+                <li>
+                  <input name="Wi-Fi" type="checkbox" id="filter-WiFi" />
+                  <label for="filter-WiFi">Wi-Fi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Тип жилья:</legend>
+              <ul>
+                <li>
+                  <input
+                    name="housing"
+                    value="Hotel"
+                    type="radio"
+                    checked
+                    id="filter-hotel"
+                  />
+                  <label for="filter-hotel">Гостиница</label>
+                </li>
+                <li>
+                  <input
+                    name="housing"
+                    value="Motel"
+                    type="radio"
+                    id="filter-motel"
+                  />
+                  <label for="filter-motel">Мотель</label>
+                </li>
+                <li>
+                  <input
+                    name="housing"
+                    value="Apartments"
+                    type="radio"
+                    id="filter-apartments"
+                  />
+                  <label for="filter-apartments">Апартаменты</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Стоимость, ₽:</legend>
+              <div>
+                <!--не забудь про псевдоклассы на "от" и "до" в инпутах-->
+                <label>
+                  <input name="price" type="text" value="0" placeholder="от" />
+                </label>
+                <label>
+                  <input
+                    name="price"
+                    type="text"
+                    value="9000"
+                    placeholder="до"
+                  />
+                </label>
+              </div>
+            </fieldset>
+            <button type="submit">Применить</button>
+            <button type="submit">Сбросить</button>
+          </form>
+        </section>
+        <section>
+          <div>
+            <h2>Найдено гостиниц: 38</h2>
+            <form>
+              <span tabindex="0">Сначала дешевые</span>
+            </form>
+            <ul>
+              <li>
+                <button>
+                  <span>Сетка</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span>Список</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span>Крупно</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <article>
+              <div>
+                <a>
+                  <img alt="Amara Resort & Spa" />
+                </a>
+              </div>
+              <h3>Amara Resort & Spa</h3>
+              <div>
+                <span>Гостиница</span>
+                <span>От 4000 ₽</span>
+              </div>
+              <div>
+                <button>подробнее</button>
+                <button>в избранное</button>
+              </div>
+              <div>
+                <div>
+                  <!-- Тут нужно сделать before со звездами  -->
+                  <div class="rating__stars"></div>
+                  <span style="width: 80%"></span>
+                  <span class="visually-hidden">Rating</span>
+                </div>
+                <div>
+                  <b>Рейтинг:</b>
+                  <span>8,5</span>
+                </div>
+              </div>
+            </article>
+            <article>
+              <div>
+                <a>
+                  <img alt="Villas at Poco Diablo" />
+                </a>
+              </div>
+              <h3>Villas at Poco Diablo</h3>
+              <div>
+                <span>Гостиница</span>
+                <span>От 5000 ₽</span>
+              </div>
+              <div>
+                <button>подробнее</button>
+                <button>в избранном</button>
+              </div>
+              <div>
+                <div>
+                  <!-- Тут нужно сделать before со звездами  -->
+                  <div class="rating__stars"></div>
+                  <span style="width: 80%"></span>
+                  <span class="visually-hidden">Rating</span>
+                </div>
+                <div>
+                  <b>Рейтинг:</b>
+                  <span>9,2</span>
+                </div>
+              </div>
+            </article>
+            <article>
+              <div>
+                <a>
+                  <img alt="Desert Quail Inn" />
+                </a>
+              </div>
+              <h3>Desert Quail Inn</h3>
+              <div>
+                <span>Гостиница</span>
+                <span>От 2500 ₽</span>
+              </div>
+              <div>
+                <button>подробнее</button>
+                <button>в избранное</button>
+              </div>
+              <div>
+                <div>
+                  <!-- Тут нужно сделать before со звездами  -->
+                  <div class="rating__stars"></div>
+                  <span style="width: 80%"></span>
+                  <span class="visually-hidden">Rating</span>
+                </div>
+                <div>
+                  <b>Рейтинг:</b>
+                  <span>6,9</span>
+                </div>
+              </div>
+            </article>
+            <article>
+              <div>
+                <a>
+                  <img alt="GreenTree Inn" />
+                </a>
+              </div>
+              <h3>GreenTree Inn</h3>
+              <div>
+                <span>Гостиница</span>
+                <span>От 1500 ₽</span>
+              </div>
+              <div>
+                <button>подробнее</button>
+                <button>в избранное</button>
+              </div>
+              <div>
+                <div>
+                  <!-- Тут нужно сделать before со звездами  -->
+                  <div class="rating__stars"></div>
+                  <span style="width: 80%"></span>
+                  <span class="visually-hidden">Rating</span>
+                </div>
+                <div>
+                  <b>Рейтинг:</b>
+                  <span>5,0</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <nav>
+            <ul class="pagination">
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li disabled>
+                <a>...</a>
+              </li>
+              <li><a href="#">10</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <!--форма для отправки писем на Email-->
+      <div class="content-bottom-top">
+        <h2>Подпишитесь на рассылку</h2>
+        <p>
+          Только полезная информация и никакого спама, честное бойскаутское!
+        </p>
+        <form action="/subscribe" method="post">
+          <input type="email" name="email" placeholder="Ваш e-mail" />
+          <button type="submit">Подписаться</button>
+        </form>
+      </div>
+      <div class="content-bottom-footer">
+        <ul class="footer-social">
+          <li>
+            <a href="#"><span>Вконтакте</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Телеграмм</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Youtube</span></a>
+          </li>
+        </ul>
+        <p>+7 (812) 812-12-12</p>
+      </div>
+      <div class="logo-htmlacademy">
+        <a href="https://htmlacademy.ru/"><span>htmlacademy</span></a>
+      </div>
+    </footer>
+  </body>
+</html>
